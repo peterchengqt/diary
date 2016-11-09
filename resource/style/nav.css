@@ -1,0 +1,14 @@
+#nav table{width: 98%;height: 100%;border-collapse: collapse;border-width: 0px 1px 1px 0px;border-color: #73dbee;margin: 5px 1% 0px 1%; border-style: solid;}
+#nav table thead td{padding: 5px 0px;}
+#nav table td{border-width: 1px 0px 0px 1px;border-style: solid;border-color: #73dbee;text-align: center}
+#nav-add{
+    width: 98%;
+    margin: 0px 1% 0px 1%;
+}
+#nav-add input[type=text]{
+    display: block;
+    margin-top: 5px;
+    height: 30px;
+    width: 400px;
+    padding: 5px;
+}

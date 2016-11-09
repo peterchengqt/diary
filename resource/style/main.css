@@ -1,0 +1,48 @@
+*{padding: 0px;margin: 0px}
+html,body{width: 100%;height: 100%}
+a{text-decoration: none}
+ul{list-style: none}
+div,p,a,span{font-size: 14px;font-family: "Microsoft YaHei UI";color: #333;}
+.box{width: 100%;height: 100%}
+.box .btn-box{
+    width: 98%;
+    margin: 5px 1% 0px 1%;
+}
+.box .inner-content{
+    width: 1210px;
+    margin: auto;
+    position: relative;
+}
+.box .btn{
+    display: inline-block;
+    background: #73dbee;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    color: aliceblue;
+    border-radius: 5px;
+    margin-left: 5px;
+    border: none;
+}
+.box .btn:hover{
+    background-color: aqua;
+}
+.box .btn:first-of-type{
+    margin-left: 0px;
+}
+.box .nav{
+    width: 98%;
+    margin: 0px 1%;
+    padding: 5px 0px;
+}
+.box .nav a{
+    color: red;
+}
+.box .nav a:hover{
+    color:darkred;
+}
+.box hr{
+    width: 98%;
+    margin: 0px 1%;
+}

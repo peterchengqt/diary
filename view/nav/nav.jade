@@ -1,0 +1,37 @@
+//Created by Perter on 2016/11/7
+doctype html
+html
+    head
+        title peter diary web manager of column
+        link(href="/style/main.css" rel="stylesheet")
+        link(href="/style/nav.css" rel="stylesheet")
+    body
+        div(id="nav" class="box")
+            div(class="btn-box")
+                a(href="/admin/nav/add.shtml" class="btn") 添加导航
+                a(href="/admin/nav/add.shtml" class="btn") 刷新数据
+            table
+                thead
+                    tr
+                        td(width="5%")
+                            input(type="checkbox" class="checked-parent")
+                        td(width="10%") 导航栏名称
+                        td(width="10%") 导航栏标识
+                        td(width="30%") 导航栏url
+                        td(width="20%") 创建时间
+                        td(width="25%") 操作.
+                tbody
+                    -for(var i in nav)
+                        tr
+                          td
+                            input(type="checkbox" class="checked-child")
+                            input(type="hidden" value=nav[i]._id)
+                          td=nav[i].navName
+                          td=nav[i].navMark
+                          td=nav[i].navUrl
+                          td=nav[i].navTime
+                          td
+                            a(href="#" class="btn" style="height:30px;line-height:30px;") 添加子导航
+
+
+

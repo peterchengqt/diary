@@ -1,0 +1,7 @@
+#index .nav{
+    height: 50px;
+    background: #eeeeee;
+}
+#index .nav .logo{
+    height: 100%;
+}
