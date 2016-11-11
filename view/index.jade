@@ -1,11 +1,260 @@
 doctype html
-html
+html(lang="zh-CN")
     head
         title welcome to peter diary
-        link(href="/style/main.css" rel="stylesheet")
-        link(href="/style/index.css" rel="stylesheet")
+        meta(charset="utf-8")
+        link(href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet")
+        link(href="/unslider/dist/css/unslider.css" rel="stylesheet")
+        link(href="/unslider/dist/css/unslider-dots.css" rel="stylesheet")
+        link(href="/main/main.css" rel="stylesheet")
+        link(href="/main/index.css" rel="stylesheet")
     body
-        div.box(id="index")
-            .inner-content.nav
+        div#index.main-content-width
+            nav.navbar.navbar-inverse(role="navigation" style="margin-bottom:0px;border-radius:0px")
+                .container-fluid
+                    .navbar-header
+                        a.navbar-brand(href="/") PeterDiary
+                    div
+                        ul.nav.navbar-nav
+                            li.active
+                                a(href="/") 首页
+                            li
+                                a(href="/article") 文展
+                            li
+                                a(href="/heart") 心语
+                            li.dropdown
+                                a.dropdown-toggle(href="/person" data-toggle="dropdown") 团队
+                                    span.caret
+                                ul.dropdown-menu(role="menu")
+                                    li
+                                        a(href="/person/d") D
+                                    li
+                                        a(href="/person/peter") peter
+                                    li
+                                        a(href="/person/moyu") moyu
+                                    li.divider
+                                    li
+                                        a(href="/person/jc") jc
+                            li.dropdown
+                                a.dropdown-toggle(href="/teach" data-toggle="dropdown") 技术
+                                    span.caret
+                                ul.dropdown-menu(role="menu")
+                                    li
+                                        a(href="/teach/js") javascript
+                                    li
+                                        a(href="/teach/node") nodejs
+                                    li.divider
+                                    li
+                                        a(href="/teach/mongo") mongodb
+                    div.navbar-right
+                        ul.nav.navbar-nav
+                            li
+                                a.label.label-default(href="/sign" style="background:none") 登陆
+                            li
+                                button.btn.btn-info.navbar-btn.btn-sm(type="button" style="margin-right:10px") 注册
+            .jumbotron.index-banner
+                .container
+                    h1 hello team!
+                    p welcome to peterdiary
+                    p here recorded a little team's growth process and something like problem、experience、idea will show on this platform
+                    p only be uesd for peter team
+                    p
+                        a(class="btn btn-primary btn-lg" href="#" role="button") learn more
+            div.main-content-inner-width.index-row-1
+                div.page-header
+                    h1 language and framework
+                div.container-fluid.index-row-1-language
+                    div.row
+                        div.col-lg-3
+                            a.btn.btn-success(href="/language/java") java
+                        div.col-lg-3
+                            a.btn.btn-warning(href="/language/javascript") javascript
+                        div.col-lg-3
+                            a.btn.btn-primary(href="/language/css3") css3
+                        div.col-lg-3
+                            a.btn.btn-info(href="/language/nodejs") nodejs
+                    div.row
+                        div.col-lg-3
+                            a.btn.btn-primary(href="/language/spring") spring
+                        div.col-lg-3
+                            a.btn.btn-info(href="/language/mongo") mongo
+                        div.col-lg-3
+                            a.btn.btn-danger(href="/language/mybatis") mybatis
+                        div.col-lg-3
+                            a.btn.btn-warning(href="/language/reactjs") reactjs
+                div.container-fluid(style="text-align:center;margin-top:20px;font-size:18px")
+                    a.text-primary(href="/language") more...
+                div.page-header
+                    h1 focus
+                div.container-fluid
+                    div.row
+                        div.col-lg-9
+                            div.index-row-1-banner(dir="rtl")
+                                ul
+                                    li
+                                        a(href="/")
+                                            img(src="/images/test1.jpg")
+                                    li
+                                        a(href="/")
+                                            img(src="/images/test2.jpg")
+                                    li
+                                        a(href="/")
+                                            img(src="/images/test3.jpg")
+                                    li
+                                        a(href="/")
+                                            img(src="/images/test4.jpg")
+                        div.col-lg-3
+                            ul#index-row-1-nav.nav.nav-pills(role="tablist")
+                                li.active(role="presentation")
+                                    a(href="#hot") hot
+                                li(role="presentation")
+                                    a(href="#today") today
+                                li(role="presentation")
+                                    a(href="#guess") guess
+                            div#index-row-1-tab.tab-content(style="")
+                                .tab-pane.active(role="tabpanel" id="hot")
+                                    table.table.table-striped(style="margin-bottom:0px;table-layout:fixed")
+                                        tr
+                                          td(width="10%")
+                                            span.label.label-danger 1
+                                          td(width="90%")
+                                            a(href="/") this is a title for test this is a title for test this is a title for test
+                                        tr
+                                          td
+                                            span.label.label-warning 2
+                                          td
+                                            a(href="/") finical is started
+                                        tr
+                                          td
+                                            span.label.label-success 3
+                                          td
+                                              a(href="/") hello world! team is on the way
+                                        tr
+                                          td
+                                              span.label.label-default 4
+                                          td
+                                              a(href="/") finical is started
+                                        tr
+                                          td
+                                              span.label.label-default 5
+                                          td
+                                              a(href="/") finical is started
+                                .tab-pane(role="tabpanel" id="today")
+                                    table.table.table-striped(style="margin-bottom:0px;table-layout:fixed")
+                                        tr
+                                            td(width="10%")
+                                                span.label.label-default 1
+                                            td(width="90%")
+                                                a(href="/") this is a title for test this is a title for test this is a title for test
+                                        tr
+                                            td
+                                                span.label.label-default 2
+                                            td
+                                                a(href="/") finical is started
+                                        tr
+                                            td
+                                                span.label.label-default 3
+                                            td
+                                                a(href="/") hello world! team is on the way
+                                        tr
+                                            td
+                                                span.label.label-default 4
+                                            td
+                                                a(href="/") finical is started
+                                        tr
+                                            td
+                                                span.label.label-default 5
+                                            td
+                                                a(href="/") finical is started
+                                .tab-pane(role="tabpanel" id="guess")
+                                    table.table.table-striped(style="margin-bottom:0px;table-layout:fixed")
+                                        tr
+                                            td(width="10%")
+                                                span.label.label-default 1
+                                            td(width="90%")
+                                                a(href="/") this is a title for test this is a title for test this is a title for test
+                                        tr
+                                            td
+                                                span.label.label-default 2
+                                            td
+                                                a(href="/") finical is started
+                                        tr
+                                            td
+                                                span.label.label-default 3
+                                            td
+                                                a(href="/") hello world! team is on the way
+                                        tr
+                                            td
+                                                span.label.label-default 4
+                                            td
+                                                a(href="/") finical is started
+                                        tr
+                                            td
+                                                span.label.label-default 5
+                                            td
+                                                a(href="/") finical is started
+                div.page-header
+                    h1 project
+                div.container-fluid
+                    .row
+                        .col-lg-4
+                            .thumbnail
+                                img(src="http://pic.58pic.com/58pic/14/76/55/05k58PICcMI_1024.jpg" alt="chatSys")
+                                .caption
+                                    h3 communication
+                                    p chat system for one-one and many-many
+                                    p
+                                      a.btn.btn-primary(href="/") learn more
+                        .col-lg-4
+                            .thumbnail
+                                img(src="/images/1.jpg" alt="marketSys")
+                                .caption
+                                    h3 finical market system
+                                    p chat system for one-one and many-many
+                                    p
+                                      a.btn.btn-primary(href="/") learn more
+                        .col-lg-4
+                            .thumbnail
+                                img(src="http://www.poon.com.cn/images/xiangmupic4.jpg" alt="projectMan")
+                                .caption
+                                    h3 project manager
+                                    p chat system for one-one and many-many
+                                    p
+                                      a.btn.btn-primary(href="/") learn more
+                div.container-fluid(style="text-align:center;margin-top:20px;font-size:18px")
+                    a.text-primary(href="/language") more...
+                div.page-header
+                    h1 the world in your eyes
+                div.container-fluid
+                    div#index-row-1-think.row
+                        .col-lg-5(role="block" style="height:500px")
+                            a(href="/")
+                              img(src="http://consumer-res.huaweistatic.com/cn/assets/cbg-home/images/press/mate8.jpg")
+                            div(role="blockTip") test1
+                        .col-lg-5
+                            .row(style="height:200px")
+                                .col-lg-3(role="block" style="height:200px")
+                                    a(href="/")
+                                        img(src="http://consumer-res.huaweistatic.com/cn/assets/cbg-home/images/press/mate8.jpg")
+                                    div(role="blockTip") test2
+                                .col-lg-9(role="block" style="height:200px")
+                                    a(href="/")
+                                        img(src="http://consumer-res.huaweistatic.com/cn/assets/cbg-home/images/press/mate8.jpg")
+                                    div(role="blockTip") test3
+                            .row(style="height:280px")
+                                .col-lg-12(role="block" style="height:280px")
+                                    a(href="/")
+                                        img(src="http://consumer-res.huaweistatic.com/cn/assets/cbg-home/images/press/mate8.jpg")
+                                    div(role="blockTip") test4
+                        .col-lg-2(style="height:500px" role="block")
+                            a(href="/")
+                                img(src="http://consumer-res.huaweistatic.com/cn/assets/cbg-home/images/press/mate8.jpg")
+                            div(role="blockTip") test5
+            div.page-header
+            div(style="text-align:center") All Rights Reserved@peterdiary.com
+        script(src="/jquery/dist/jquery.min.js")
+        script(src="/bootstrap/dist/js/bootstrap.min.js")
+        script(src="/unslider/dist/js/unslider-min.js")
+        script(src="/js/index.js")
 
 
