@@ -1,0 +1,77 @@
+//Created by Perter on 2016/11/11
+doctype html
+html(style="height:100%")
+    head
+        link(href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet")
+        link(href="/main/main.css" rel="stylesheet")
+        link(href="/main/default.css" rel="stylesheet")
+        block scripts
+    body(style="height:100%")
+        .main-content-width(style="box-sizing:border-box;position:relative;height:100%")
+            nav.navbar.navbar-inverse(role="navigation" style="height:52px;margin-bottom:0px;border-radius:0px;position:absolute;top:0px;left:0px;width:100%")
+                .container-fluid
+                    .navbar-header
+                        a.navbar-brand(href="/") PeterDiary
+                    div
+                        ul.nav.navbar-nav
+                            li.active
+                                a(href="/chat") chatSys
+                            li
+                                a(href="/market") finical
+                            li.dropdown
+                                a.dropdown-toggle(href="/data" data-toggle="dropdown") data
+                                    span.caret
+                                ul.dropdown-menu(role="menu")
+                                    li
+                                        a(href="/bak") bak
+                                    li
+                                        a(href="/statistics") statistics
+                    .navbar-right
+                        ul.nav.navbar-nav
+                            li
+                                a hello peter
+                            li.dropdown
+                                a.dropdown-toggle(href="/personal" data-toggle="dropdown") personal
+                                    | &nbsp;&nbsp;
+                                    span.badge 42
+                                    | &nbsp;&nbsp;
+                                    span.caret
+                                ul.dropdown-menu(role="menu")
+                                    li
+                                        a(href="/personal") info
+                                    li
+                                        a(href="/message") message
+                                            | &nbsp;&nbsp;
+                                            span.badge 42
+                                    li
+                                        a(href="/password") password
+                                    li.divider
+                                    li
+                                        a(href="/quit") quit
+            .container-fluid(style="padding-left:0px;padding-right:0px;height:100%;")
+                .row(style="margin-left:0px;margin-right:0px;height:100%;padding-top:52px;")
+                    .col-lg-2(style="padding-left:0px;padding-right:0px;height:100%;background:#333")
+                        .panel-group(role="tablist")
+                            .panel.panel-default
+                                .panel-heading(role="tab" id="Module")
+                                    h4.panel-title
+                                        a(data-toggle="collapse" href="#ModuleGroup" aria-expanded="true" aria-controls="ModuleGroup") module
+                                .panel-collapse.collapse.in(id="ModuleGroup" role="tabpanel" aria-labelledby="Module")
+                                    ul.list-group
+                                        li.list-group-item article
+                                        li.list-group-item user
+                        .panel-group(role="tablist")
+                            .panel.panel-default
+                                .panel-heading(role="tab" id="Security")
+                                    h4.panel-title
+                                        a(data-toggle="collapse" href="#SecurityGroup" aria-expanded="true" aria-controls="SecurityGroup") Security
+                                .panel-collapse.collapse.in(id="SecurityGroup" role="tabpanel" aria-labelledby="Security")
+                                    ul.list-group
+                                        li.list-group-item role
+                                        li.list-group-item function
+                    .col-lg-10(style="padding-left:0px;padding-right:0px") he
+                        block content
+        script(src="/jquery/dist/jquery.min.js")
+        script(src="/bootstrap/dist/js/bootstrap.min.js")
+        script $('.collapse').collapse();
+        block foot
