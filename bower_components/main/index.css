@@ -1,0 +1,103 @@
+#index{padding-bottom: 20px}
+#index .index-banner{
+    background: #3c3c3c;
+}
+#index .index-banner h1{
+    color: #eeeeee;
+}
+#index .index-banner p{
+    color: #eeeeee;
+}
+#index .index-row-1 .row{
+    padding-top: 20px;
+}
+#index .index-row-1 .row:first-of-type{
+    padding-top: 0px;
+}
+#index .index-row-1 .index-row-1-language .row a{
+    width: 100%;
+    height: 100px;
+    display: block;
+    font-size: 36px;
+    line-height: 100px;
+}
+#index .index-row-1 .index-row-1-banner{
+    position: relative;
+    overflow: hidden;
+}
+#index .index-row-1 .index-row-1-banner ul{
+    list-style: none;
+}
+.unslider{
+    background: #3c3c3c;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #333;
+}
+.unslider-nav ol li{
+    background: #aaa;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+#index .index-row-1 .index-row-1-banner ul li{
+    float: left;
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+#index .index-row-1 .index-row-1-banner ul li img{
+    width: 100%;
+    height: 300px;
+}
+#index-row-1-nav li[role=presentation]{
+    width: 30%;
+    text-align: center;
+}
+#index-row-1-tab div[role=tabpanel]{
+    margin-top: 20px;
+    height: 260px;
+}
+#index-row-1-tab div[role=tabpanel] tr{
+    height: 52px;
+}
+#index-row-1-tab div[role=tabpanel] td{
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#index-row-1-tab div[role=tabpanel] tr td:first-of-type{
+    text-align: center;
+}
+#index .thumbnail img{
+    height: 300px;
+    width: 100%;
+}
+#index-row-1-think{
+    height: 500px;
+ }
+#index-row-1-think a{
+    width: 100%;
+    height: 100%;
+}
+#index-row-1-think div[role=block]{
+    position: relative;
+}
+#index-row-1-think div[role=block] a img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 10px #333;
+    border-radius: 10px;
+}
+#index-row-1-think div[role=blockTip]{
+    position: absolute;
+    bottom: 0px;
+    height: 50px;
+    background: rgba(0,0,0,0.5);
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

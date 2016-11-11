@@ -1,0 +1,16 @@
+.list-group{
+    margin-bottom: 0px;
+}
+.list-group li:first-child,.list-group li:last-child{
+    border-radius: 0px;
+}
+.panel-group{
+    margin-bottom: 0px;
+}
+.panel-group .panel{
+    border-radius: 0px;
+}
+
+.panel-title a{
+    text-decoration: none;
+}

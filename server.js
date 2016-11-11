@@ -17,11 +17,16 @@ app.use("/admin",adminRouter);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 //use the static resource
-app.use(express.static("resource"));
+app.use(express.static("bower_components"));
 //set the view engine,there use jade template
 app.set("view engine","jade");
 //set the view directory
-app.set("views",[viewPath,viewPath+"/nav"]);
-
+app.set("views",[viewPath,viewPath+"/nav",viewPath+"/accessadmin"]);
+app.get("/login",function (req,res) {
+    res.render("login");
+})
+app.get("/main",function (req,res) {
+    res.render("default");
+})
 app.listen(3000);
 console.log("application named `web` start on port 3000");
