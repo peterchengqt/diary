@@ -28,5 +28,8 @@ app.get("/login",function (req,res) {
 app.get("/main",function (req,res) {
     res.render("default");
 })
+app.get("/SiteConfig-base",function (req,res) {
+    res.render("SiteConfig-base");
+})
 app.listen(3000);
 console.log("application named `web` start on port 3000");

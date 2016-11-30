@@ -48,14 +48,15 @@ html(style="height:100%")
                                     li.divider
                                     li
                                         a(href="/quit") quit
-            .container-fluid(style="padding-left:0px;padding-right:0px;height:100%;")
-                .row(style="margin-left:0px;margin-right:0px;height:100%;padding-top:52px;")
-                    .col-lg-2(style="padding-left:0px;padding-right:0px;height:100%;background:#333")
+            .container-fluid(style="padding-left:0px;padding-right:0px")
+                .row(style="margin-left:0px;margin-right:0px;height:100%;padding-top:52px;background:#333")
+                    .col-lg-2(style="padding-left:0px;padding-right:0px;height:100%")
                         .panel-group(role="tablist")
                             .panel.panel-default
                                 .panel-heading(role="tab" id="Module")
                                     h4.panel-title
-                                        a(data-toggle="collapse" href="#ModuleGroup" aria-expanded="true" aria-controls="ModuleGroup") module
+                                        a(data-toggle="collapse" href="#ModuleGroup" aria-expanded="false" aria-controls="ModuleGroup") module
+                                        i.glyphicon.glyphicon-list(style="float:right")
                                 .panel-collapse.collapse.in(id="ModuleGroup" role="tabpanel" aria-labelledby="Module")
                                     ul.list-group
                                         li.list-group-item article
@@ -64,14 +65,27 @@ html(style="height:100%")
                             .panel.panel-default
                                 .panel-heading(role="tab" id="Security")
                                     h4.panel-title
-                                        a(data-toggle="collapse" href="#SecurityGroup" aria-expanded="true" aria-controls="SecurityGroup") Security
+                                        a(data-toggle="collapse" href="#SecurityGroup" aria-expanded="false" aria-controls="SecurityGroup") Security
+                                        i.glyphicon.glyphicon-list(style="float:right")
                                 .panel-collapse.collapse.in(id="SecurityGroup" role="tabpanel" aria-labelledby="Security")
                                     ul.list-group
                                         li.list-group-item role
                                         li.list-group-item function
-                    .col-lg-10(style="padding-left:0px;padding-right:0px") he
+                        .panel-group(role="tablist")
+                            .panel.panel-default
+                                .panel-heading(role="tab" id="Site")
+                                    h4.panel-title
+                                        a(data-toggle="collapse" href="#SiteGroup" aria-expanded="true" aria-controls="SiteGroup") SiteConfig
+                                        i.glyphicon.glyphicon-list(style="float:right")
+                                .panel-collapse.collapse.in(id="SiteGroup" role="tabpanel" aria-labelledby="Site")
+                                    ul.list-group
+                                        li.list-group-item base
+                                        li.list-group-item visitRecord
+                                        li.list-group-item template
+                                        li.list-group-item static
+                    .col-lg-10(style="padding-left:0px;padding-right:0px;height:100%;background-color:#fff;")
                         block content
         script(src="/jquery/dist/jquery.min.js")
         script(src="/bootstrap/dist/js/bootstrap.min.js")
-        script $('.collapse').collapse();
+        script $('.collapse').collapse()
         block foot

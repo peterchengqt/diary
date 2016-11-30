@@ -1,0 +1,157 @@
+//Created by Perter on 2016/11/15.
+extends template/layout
+block scripts
+    link(href="/main/SiteConfig-base.css" rel="stylesheet")
+block content
+    .container-fluid(style="padding-top:5px")
+        .row
+            .col-md-12
+                p.text-primary logo：
+                    img.img-thumbnail(style="height:40px" src="http://upload.youbika666.com/Web/images/default/logo.png")
+                    | &nbsp;&nbsp;
+                    button.btn.btn-primary.btn-xs(type="button" id="update-logo" data-toggle="modal" data-target="#update-logo-modal") 更换
+        .row
+            .col-md-12
+                .panel.panel-primary
+                    .panel-heading nav module
+                    .panel-body
+                        button.btn.btn-primary.btn-xs(type="button" id="generator-nav") generator
+                        | &nbsp;&nbsp;
+                        button.btn.btn-primary.btn-xs(type="button" id="insert-nav") insert
+                    table.table.table-bordered.table-hover(id="nav-table")
+                        thead
+                            tr
+                                th(width="5%") serial
+                                th(width="10%") name
+                                th(width="10%") mark
+                                th(width="20%") url
+                                th(width="5%") order
+                                th(width="20%") time
+                                th(width="30%") operation
+                        tbody
+                            tr
+                                td 1
+                                td 首页
+                                td index
+                                td /
+                                td 1
+                                td 2016-11-15 12:00:00
+                                td
+                                    button.btn.btn-danger.btn-xs(type="button") 删除
+                                    | &nbsp;
+                                    button.btn.btn-primary.btn-xs.nav-expand-collaspe(type="button") 展开
+                                    | &nbsp;
+                                    button.btn.btn-primary.btn-xs(type="button") 更新
+                                    | &nbsp;
+                                    button.btn.btn-primary.btn-xs(type="button") 二级添加
+                            tr(data-mark="team")
+                                td 2
+                                td 团队
+                                td team
+                                td /team
+                                td 2
+                                td 2016-11-15 12:00:00
+                                td
+                                    button.btn.btn-danger.btn-xs.nav-parent-delete(type="button") 删除
+                                    | &nbsp;
+                                    button.btn.btn-primary.btn-xs.nav-expand-collaspe(type="button") 展开
+                                    | &nbsp;
+                                    button.btn.btn-primary.btn-xs(type="button") 更新
+                                    | &nbsp;
+                                    button.btn.btn-primary.btn-xs(type="button") 二级添加
+                            tr.info(data-parent="team")
+                                td
+                                    input(type="hidden" value="team")
+                                td D
+                                td d
+                                td /team/D
+                                td
+                                td 2016-11-15 12:00:00
+                                td
+                                    button.btn.btn-danger.btn-xs(type="button") 删除
+                                    | &nbsp;
+                                    button.btn.btn-primary.btn-xs(type="button") 更新
+                            tr.info(data-parent="team")
+                                td
+                                    input(type="hidden" value="team")
+                                td peter
+                                td p
+                                td /team/peter
+                                td
+                                td 2016-11-15 12:00:00
+                                td
+                                    button.btn.btn-danger.btn-xs(type="button") 删除
+                                    | &nbsp;
+                                    button.btn.btn-primary.btn-xs(type="button") 更新
+                    .panel-footer generator the template file named "top.jsp",it is fixed
+        .row
+            .col-md-12
+                .panel.panel-primary
+                    .panel-heading foot module
+                    .panel-body
+                        button.btn.btn-primary.btn-xs(type="button" id="generator-footer") generator
+                        | &nbsp;&nbsp;
+                        button.btn.btn-primary.btn-xs(type="button" id="update-footer") update
+                        form(role="form")
+                            .form-group
+                                label outchain
+                                textarea.form-control(rows="5")
+                            .form-group
+                                label map
+                                textarea.form-control(rows="5")
+                            .form-group
+                                label other
+                                textarea.form-control(rows="5")
+                    .panel-footer generator the template file named "bottom.jsp",it is fixed
+        .row
+            .col-md-12
+                .panel.panel-primary
+                    .panel-heading banner module
+                    .panel-body
+                        button.btn.btn-primary.btn-xs(type="button" id="insert-banner") insert
+                        | &nbsp;&nbsp;
+                        button.btn.btn-primary.btn-xs(type="button" id="delete-banner") delete
+                    table.table.table-bordered.table-hover(id="banner-table")
+                        thead
+                            tr
+                                td serial
+                                td
+                                td
+                                td
+                    .panel-footer get banner from material libary
+    #update-logo-modal.modal.fade(role="dialog" tabindex="-1" aria-hidden="true")
+        .modal-dialog.modal-lg
+            .modal-content
+                .modal-header
+                    button.close(type="button" data-dismiss="modal")
+                        span(aria-hidden="true") &times;
+                        span.sr-only Close
+                    h4.modal-title update logo
+                .modal-body
+                    .alert-danger.alert(role="alert") tip:the image size must be 80*40
+                    form#update-logo-form.form-horizontal(role="form" action="/")
+                        .form-group
+                            .col-md-10
+                                input.form-control(type="text" disabled name="filepath")
+                            .col-md-2
+                                button.btn.btn-primary(type="button" onclick="$('#update-logo-file-button').click()") 选择文件
+                                input(type="file" id="update-logo-file-button" style="display:none" name="filename")
+                .modal-footer
+                    button.btn.btn-primary(type="button" data-dismiss="modal") close
+                    button.btn.btn-danger(type="button") update
+    .modal.fade(role="dialog" tabindex="-1" aria-hidden="true")
+        .modal-dialog.modal-lg
+            .modal-content
+                .modal-header
+                    button.close(type="button" data-dismiss="modal")
+                        span(aria-hidden="true") &times;
+                        span.sr-only Close
+                    h4.modal-title tip
+                .modal-body ensure delete the selected row
+                .modal-footer
+block foot
+    script(src="/components/modal-alert.js")
+    script(src="/js/SiteConfig-base.js")
+
+
+

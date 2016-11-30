@@ -1,0 +1,6 @@
+#nav-table td,#nav-table th{
+    text-align: center;
+}
+#nav-table tr[data-parent]{
+    display: none;
+}

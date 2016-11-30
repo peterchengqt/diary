@@ -14,3 +14,12 @@
 .panel-title a{
     text-decoration: none;
 }
+.panel-default{
+    border-color: #fff;
+}
+.panel-default >.panel-heading{
+    background-color: #00b3ee;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    color: #fff;
+}
